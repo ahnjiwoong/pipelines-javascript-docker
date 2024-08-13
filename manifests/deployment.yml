@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: ahnjiwoongpipelinesjavascriptdocker 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: ahnjiwoongpipelinesjavascriptdocker
+  template:
+    metadata:
+      labels:
+        app: ahnjiwoongpipelinesjavascriptdocker 
+    spec:
+      containers:
+        - name: ahnjiwoongpipelinesjavascriptdocker 
+          image: jiwooi83registry2024.azurecr.io/ahnjiwoongpipelinesjavascriptdocker
+          ports:
+          - containerPort: 8080
